@@ -10,9 +10,8 @@ namespace prueba28agosto
     {
         public int Id { get; set; }
         public decimal Total { get; set; }
-        public TotalEventArgs(int id, decimal total)
+        public TotalEventArgs(decimal total)
         {
-            Id = id;
             Total = total;
         }
     }
