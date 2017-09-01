@@ -12,5 +12,16 @@ namespace pruebaDBcontext
         public string Nombre { get; set; }
         public List<ingredient> Ingredientes { get; set; }
         public decimal Precio { get; set; }
+        public string Comentarios { get; set; }
+
+        public decimal CalcularPrecio(List<ingredient> list)
+        {
+            decimal Total = 0;
+            foreach (var ingredient in list)
+            {
+                Total += ingredient.Precio;
+            }
+            return Total;
+        }
     }
 }
